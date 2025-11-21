@@ -30,10 +30,10 @@ class SimpleRAG:
         import faiss
 
         # SentenceTransformer 로더
-        if device is None:
-            self.encoder = SentenceTransformer(embed_model_name)
-        else:
-            self.encoder = SentenceTransformer(embed_model_name, device=device)
+        self.encoder = SentenceTransformer(
+            "sentence-transformers/all-MiniLM-L6-v2",
+            device="cpu"
+        )
 
         # FAISS 관련
         self.faiss = faiss
