@@ -13,8 +13,8 @@ export VLLM_SKIP_WARMUP="true"
 
 # 4) 사용할 모델 (HuggingFace 공개 모델)
 #    - 처음 실행할 때 자동으로 다운로드됨
-MODEL="Qwen/Qwen2-1.5B-Instruct"
-SERVED_NAME="qwen2-1_5b-instruct"
+MODEL="Qwen/Qwen2-0.5B-Instruct"
+SERVED_NAME="qwen2-0_5b-instruct"
 
 python3 -m vllm.entrypoints.openai.api_server \
   --model "$MODEL" \
